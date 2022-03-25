@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="css/output.css" rel="stylesheet" />
+        <title>Document</title>
+    </head>
+    <body class="bg-bgcolor text-white">
+        <!-- modalenter -->
+        <!-- <div
+            class="flex w-[420px] flex-col items-center justify-center rounded-xl bg-gradient-to-tr from-[#0FECFF] to-[#A85AF9]"
+        >
+            <div class="relative flex h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-xl border bg-[#3B3A48] py-12 px-20">
+                <div class="flex w-full flex-col">
+                    <div class="absolute right-7 top-7 h-6">
+                        <img src="./img/icons/x.svg" alt="" class="h-full w-full" />
+                    </div>
+                    <h2 class="mb-7 text-3xl font-bold">Вход</h2>
+                    <div
+                        class="mb-3 flex h-12 w-full items-center justify-center rounded-xl bg-gradient-to-tr from-[#81818A] to-[#81818A]"
+                    >
+                        <input
+                            type="email"
+                            class="h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-xl border-0 bg-[#3B3A48] px-3 py-2 focus:border-0 focus:ring-0"
+                            placeholder="E-mail"
+                        />
+                    </div>
+                    <div
+                        class="mb-8 flex h-12 w-full items-center justify-center rounded-xl bg-gradient-to-tr from-[#81818A] to-[#81818A]"
+                    >
+                        <input
+                            type="email"
+                            class="h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-xl border-0 bg-[#3B3A48] px-3 py-2 focus:border-0 focus:ring-0"
+                            placeholder="E-mail"
+                        />
+                    </div>
+                    <div class="mb-8 flex h-9 justify-center">
+                        <div class="mr-3">
+                            <img src="./img/icons/google.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                        <div class="mr-3">
+                            <img src="./img/icons/twitter.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                        <div class="mr-3">
+                            <img src="./img/icons/vk.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                        <div class="mr-3">
+                            <img src="./img/icons/facebook.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                    </div>
+                    <button class="mb-5 h-12 rounded-xl bg-gradient-to-tr from-violetx to-bluea px-12 text-sm">
+                        Вход
+                    </button>
+
+                    <div class="flex justify-center text-xs text-bluea">
+                        <h2 class="mr-3"><a href="">Забыли пароль?</a></h2>
+                        <h2><a href="">Зарегистрироваться</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- header -->
+        <header class="sticky top-0 z-50 bg-bgcolor py-2 sm:py-0">
+            <div class="container">
+                <div class="flex justify-between sm:items-center">
+                    <div class="flex h-7 xl:hidden">
+                        <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0 1C0 1.55228 0.447715 2 1 2H16C16.5523 2 17 1.55228 17 1C17 0.447715 16.5523 0 16 0H1C0.447715 0 0 0.447715 0 1ZM22 6C22 6.55228 21.5523 7 21 7H1C0.447715 7 0 6.55228 0 6C0 5.44772 0.447716 5 1 5H21C21.5523 5 22 5.44772 22 6ZM14 11C14 11.5523 13.5523 12 13 12H1C0.447715 12 0 11.5523 0 11C0 10.4477 0.447716 10 1 10H13C13.5523 10 14 10.4477 14 11Z"
+                                fill="url(#paint0_linear_281_4532)"
+                            />
+                            <defs>
+                                <linearGradient
+                                    id="paint0_linear_281_4532"
+                                    x1="11"
+                                    y1="0"
+                                    x2="11"
+                                    y2="10"
+                                    gradientUnits="userSpaceOnUse"
+                                >
+                                    <stop stop-color="#AE54F9" />
+                                    <stop offset="1" stop-color="#0EEDFF" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="flex sm:mt-7">
+                        <div class="h-[42px]">
+                            <img src="./img/icons/logo.svg" alt="" class="h-full w-full" />
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <button class="mr-5 h-10 rounded-xl bg-gradient-to-r from-brownone to-browntwo px-14 sm:hidden">
+                            <a class="bg-gradient-to-tr from-violet to-blue bg-clip-text font-semibold text-ts">
+                                Вход
+                            </a>
+                        </button>
+                        <button class="mr-5 h-10 rounded-xl bg-gradient-to-r from-brownone to-browntwo px-10 sm:hidden">
+                            <a class="bg-gradient-to-tr from-violeta to-bluea bg-clip-text font-semibold text-ts">
+                                Регистрация
+                            </a>
+                        </button>
+                        <div class="relative h-6" id="globe_id">
+                            <img src="./img/icons/globe.svg" alt="" class="h-full w-full object-contain" />
+                            <div
+                                id="modal_lang"
+                                class="absolute right-0 top-full mt-2 hidden w-[8rem] flex-col rounded-xl bg-gradient-to-tr from-violetj to-graij px-3 py-3 text-left text-sm"
+                            >
+                                <div class="mb-3 flex">
+                                    <div class="mr-3 flex">
+                                        <img src="./img/icons/ru.svg" alt="" />
+                                    </div>
+                                    <span
+                                        class="bg-gradient-to-tr from-violeta to-bluea bg-clip-text font-semibold text-ts"
+                                        >Russian</span
+                                    >
+                                </div>
+                                <div class="mb-3 flex">
+                                    <div class="mr-3 flex">
+                                        <img src="./img/icons/en.svg" alt="" />
+                                    </div>
+                                    <span
+                                        class="bg-gradient-to-tr from-violeta to-bluea bg-clip-text font-semibold text-ts"
+                                        >English</span
+                                    >
+                                </div>
+                                <div class="mb-3 flex">
+                                    <div class="mr-3 flex">
+                                        <img src="./img/icons/du.svg" alt="" />
+                                    </div>
+                                    <span
+                                        class="bg-gradient-to-tr from-violeta to-bluea bg-clip-text font-semibold text-ts"
+                                        >Deutsch</span
+                                    >
+                                </div>
+                                <div class="flex">
+                                    <div class="mr-3 flex">
+                                        <img src="./img/icons/ch.svg" alt="" />
+                                    </div>
+                                    <span
+                                        class="bg-gradient-to-tr from-violeta to-bluea bg-clip-text font-semibold text-ts"
+                                        >China</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- contentone -->
+        <div
+            class="mb-20 h-[32rem] bg-contain bg-[center_bottom_4rem] bg-no-repeat py-16 sm:mb-8 sm:h-full sm:bg-[center_top_0rem] sm:py-0"
+            style="background-image: url(./img/mapbase.png)"
+        >
+            <div class="container">
+                <div class="mt-9 sm:mt-0">
+                    <div class="flex sm:flex-col-reverse sm:justify-center">
+                        <div class="flex w-1/2 flex-col justify-between sm:w-full sm:justify-center">
+                            <div class="w-8/12 text-xl sm:mb-4 sm:w-full sm:justify-center sm:text-base sm:font-medium">
+                                <h1 class="mb-4 text-4xl font-bold sm:mb-1 sm:text-2xl">
+                                    Бесплатный прием смс <br />
+                                    на временные номера
+                                </h1>
+                                <p>
+                                    для приватной регистрации <br />
+                                    на различных сайтах, сервисах и приложениях
+                                </p>
+                            </div>
+
+                            <div class="flex sm:w-full sm:flex-col">
+                                <button
+                                    class="mr-5 h-12 rounded-xl bg-gradient-to-tr from-violetx to-bluea px-12 text-sm sm:mb-3 sm:h-14"
+                                >
+                                    Попробовать бесплатно
+                                </button>
+                                <button
+                                    class="mr-5 h-12 rounded-xl bg-gradient-to-tr from-violetj to-graij px-12 text-sm sm:h-14"
+                                >
+                                    Купить временный номер
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex h-[26rem] w-1/2 justify-center sm:w-full">
+                            <img src="./img/images/smartwatch.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contenttwo  -->
+        <div class="mb-20">
+            <div class="container">
+                <h2 class="mb-16 text-center text-3xl font-bold">Виртуальный номер подойдет для:</h2>
+                <div
+                    class="flex h-[470px] justify-between sm:h-full sm:w-full sm:flex-col sm:items-center sm:justify-between"
+                >
+                    <div
+                        class="flex w-6/12 flex-col items-center justify-center rounded-xl bg-gradient-to-tr from-violeta to-blue sm:mb-7 sm:h-[325px] sm:w-full sm:overflow-hidden"
+                    >
+                        <div class="flex h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-xl bg-bgcolor p-4">
+                            <div class="w-6/12 pr-4 sm:w-1/2">
+                                <img src="./img/images/men.svg" alt="" class="h-full w-full object-contain" />
+                            </div>
+                            <div class="w-6/12 text-base sm:h-full sm:w-1/2 sm:text-xs">
+                                <div class="mb-2 sm:hidden">
+                                    <span class="text-base font-semibold sm:text-xs"
+                                        >Что такое виртуальный номер ?</span
+                                    >
+                                </div>
+                                <span class="font-normal sm:text-xs">
+                                    Обычно с помощью подобных номеров для приема смс регистрируются в социальных сетях
+                                    (ВК, ОК, Facebook, Instagram), подтверждают мессенджеры (Telegram, WhatsApp, Viber,
+                                    WeChat) и электронные почты (Яндекс, Mail.ru, Gmail, Yahoo), а также используют для
+                                    других онлайн сайтов и сервисов: Авито, Юла, AUTO.RU, Twitter, SEOsprint, Steam,
+                                    Uber, Gett, Microsoft, Tinder. К тому же временные фейк номера телефонов можно
+                                    использовать для онлайн приема одноразовых личных сообщений, чтобы оставаться
+                                    анонимным и не покупать симкарту на один раз.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="relative flex w-[352px] flex-col justify-between sm:w-[250px] sm:flex-col sm:items-center sm:justify-between"
+                    >
+                        <div
+                            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform sm:-left-2 sm:hidden sm:w-full"
+                        >
+                            <svg
+                                class="sm:h-[250px]"
+                                width="541"
+                                height="372"
+                                viewBox="0 0 541 372"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M448 183C498.258 183 539 142.482 539 92.5C539 42.5182 498.258 2 448 2"
+                                    stroke="url(#paint0_linear_0_1)"
+                                    stroke-width="2"
+                                    stroke-dasharray="7 2"
+                                />
+                                <path
+                                    d="M95 183C43.6375 183 2 224.861 2 276.5C2 328.139 43.6375 370 95 370"
+                                    stroke="url(#paint1_linear_0_1)"
+                                    stroke-width="2"
+                                    stroke-dasharray="7 2"
+                                />
+                                <defs>
+                                    <linearGradient
+                                        id="paint0_linear_0_1"
+                                        x1="465.593"
+                                        y1="-7.05"
+                                        x2="544.323"
+                                        y2="183.308"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop stop-color="#0EEDFF" />
+                                        <stop offset="0.959026" stop-color="#AE74F9" />
+                                    </linearGradient>
+                                    <linearGradient
+                                        id="paint1_linear_0_1"
+                                        x1="77.02"
+                                        y1="379.35"
+                                        x2="-4.94537"
+                                        y2="183.312"
+                                        gradientUnits="userSpaceOnUse"
+                                    >
+                                        <stop stop-color="#0EEDFF" />
+                                        <stop offset="0.959026" stop-color="#AE74F9" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div
+                            class="w-12/12 flex items-center justify-center rounded-xl bg-gradient-to-tr from-violetx to-bluea sm:mb-7 sm:h-[90px]"
+                        >
+                            <div
+                                class="flex h-[calc(100%-2px)] w-[calc(100%-2px)] flex-col rounded-xl bg-bgcolor py-7 text-center sm:p-6"
+                            >
+                                <span class="text-base font-semibold">Регистрации наразличных сайтах, </span>
+                                <span class="text-base font-semibold">сервисах и приложениях</span>
+                            </div>
+                        </div>
+                        <div
+                            class="w-12/12 flex items-center justify-center rounded-xl bg-gradient-to-tr from-violeta to-bluea sm:mb-7 sm:h-[90px]"
+                        >
+                            <div
+                                class="flex h-[calc(100%-2px)] w-[calc(100%-2px)] flex-col rounded-xl bg-bgcolor py-7 text-center"
+                            >
+                                <span class="text-base font-semibold">Регистрации наразличных сайтах, </span>
+                                <span class="text-base font-semibold">сервисах и приложениях</span>
+                            </div>
+                        </div>
+                        <div
+                            class="w-12/12 flex items-center justify-center rounded-xl bg-gradient-to-tr from-violet to-bluea sm:mb-7 sm:h-[90px]"
+                        >
+                            <div
+                                class="flex h-[calc(100%-2px)] w-[calc(100%-2px)] flex-col rounded-xl bg-bgcolor py-7 text-center"
+                            >
+                                <span class="text-base font-semibold">Регистрации наразличных сайтах, </span>
+                                <span class="text-base font-semibold">сервисах и приложениях</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contentthree -->
+        <div class="mb-20">
+            <div class="container">
+                <h2 class="mb-20 text-center text-3xl font-bold">Преимущества виртуальных номеров</h2>
+                <div class="flex justify-between sm:flex-col sm:items-center">
+                    <div class="mb-10 flex w-64 flex-col text-left font-semibold">
+                        <div class="mx-auto mb-3 w-28">
+                            <img src="./img/icons/twosimcards.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                        <h3 class="mb-2 text-lg">Доступно более 100 номеров</h3>
+                        <p>Используйте для приватной регистрации на всех площадках</p>
+                    </div>
+                    <div class="mb-10 flex w-64 flex-col text-left font-semibold">
+                        <div class="mx-auto mb-3 w-28">
+                            <img src="./img/icons/globemicro.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                        <h3 class="mb-2 text-lg">Доступно более 100 номеров</h3>
+                        <p>Используйте для приватной регистрации на всех площадках</p>
+                    </div>
+                    <div class="mb-10 flex w-64 flex-col text-left font-semibold">
+                        <div class="mx-auto mb-3 w-20">
+                            <img src="./img/icons/time.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                        <h3 class="mb-2 text-lg">Доступно более 100 номеров</h3>
+                        <p>Используйте для приватной регистрации на всех площадках</p>
+                    </div>
+                </div>
+                <div class="flex justify-between sm:flex-col sm:items-center">
+                    <div class="mb-10 flex w-64 flex-col text-left font-semibold">
+                        <div class="mx-auto mb-3 w-28">
+                            <img src="./img/icons/dolaricon.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                        <h3 class="mb-2 text-lg">Доступно более 100 номеров</h3>
+                        <p>Используйте для приватной регистрации на всех площадках</p>
+                    </div>
+                    <div class="mb-10 flex w-64 flex-col text-left font-semibold">
+                        <div class="mx-auto mb-3 w-28">
+                            <img src="./img/icons/globelocation.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                        <h3 class="mb-2 text-lg">Доступно более 100 номеров</h3>
+                        <p>Используйте для приватной регистрации на всех площадках</p>
+                    </div>
+                    <div class="mb-10 flex w-64 flex-col text-left font-semibold">
+                        <div class="mx-auto mb-3 w-28">
+                            <img src="./img/icons/timeicon.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                        <h3 class="mb-2 text-lg">Доступно более 100 номеров</h3>
+                        <p>Используйте для приватной регистрации на всех площадках</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contentfour -->
+        <div class="mb-20">
+            <div class="container">
+                <h2 class="mb-16 text-center text-3xl font-bold">Как получить номер?</h2>
+                <div>
+                    <div class="flex justify-center">
+                        <div class="flex w-40 flex-col justify-between">
+                            <div class="flex flex-col text-base">
+                                <h3 class="mb-3 text-xl">Шаг 1</h3>
+                                <p>Зарегистрируйтесь и</p>
+                                <p>пополните баланс</p>
+                            </div>
+                            <div class="flex flex-col text-base">
+                                <h3 class="mb-3 text-xl">Шаг 3</h3>
+                                <p>Получаете номер</p>
+                            </div>
+                        </div>
+                        <div class="mx-5 flex">
+                            <img src="./img/images/treestars.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                        <div class="flex w-40 flex-col justify-center text-base">
+                            <h3 class="mb-3 text-xl">Шаг 2</h3>
+                            <p>Выберите страну</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contentfive -->
+        <div class="mb-16">
+            <div class="container">
+                <h2 class="mb-9 text-center text-3xl font-bold">Попробуйте наши бесплатные виртуальные номера</h2>
+                <div class="flex h-[37rem] justify-center">
+                    <img src="./img/screenshot.png" alt="" class="h-full w-full object-contain" />
+                </div>
+            </div>
+        </div>
+        <!-- contentsix -->
+        <div class="mb-16 sm:hidden">
+            <div class="container">
+                <div class="h-96 bg-contain bg-center bg-no-repeat" style="background-image: url(./img/Vector.png)">
+                    <div class="flex h-[21rem] flex-col items-center justify-between py-7">
+                        <h2 class="text-center text-3xl font-bold">Регистрация</h2>
+                        <div class="w-4/4 flex items-center justify-center">
+                            <div
+                                class="mr-5 flex h-10 grow items-center justify-center rounded-xl bg-gradient-to-tr from-violeta to-bluea"
+                            >
+                                <input
+                                    type="email"
+                                    class="h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-xl border-0 bg-bginput px-3 py-2 focus:border-0 focus:ring-0"
+                                    placeholder="E-mail"
+                                />
+                            </div>
+                            <div
+                                class="mr-5 flex h-10 grow items-center justify-center rounded-xl bg-gradient-to-tr from-violeta to-bluea"
+                            >
+                                <input
+                                    type="email"
+                                    class="h-[calc(100%-2px)] w-[calc(100%-2px)] rounded-xl border-0 bg-bginput px-3 py-2 focus:border-0 focus:ring-0"
+                                    placeholder="E-mail"
+                                />
+                            </div>
+                            <button
+                                class="flex h-10 grow items-center justify-center rounded-xl bg-gradient-to-tr from-violetg to-violets px-10"
+                            >
+                                Зарегистрироваться
+                            </button>
+                        </div>
+                        <div class="flex h-10 justify-center">
+                            <div class="mr-3">
+                                <img src="./img/icons/google.svg" alt="" class="h-full w-full object-contain" />
+                            </div>
+                            <div class="mr-3">
+                                <img src="./img/icons/twitter.svg" alt="" class="h-full w-full object-contain" />
+                            </div>
+                            <div class="mr-3">
+                                <img src="./img/icons/vk.svg" alt="" class="h-full w-full object-contain" />
+                            </div>
+                            <div class="mr-3">
+                                <img src="./img/icons/facebook.svg" alt="" class="h-full w-full object-contain" />
+                            </div>
+                        </div>
+                        <div class="flex justify-center text-sm">
+                            <div class="flex flex-col">
+                                <div class="mr-3 mb-3 mt-1 h-4 w-4 rounded-sm border border-indigo-600"></div>
+                                <div
+                                    class="mr-3 h-4 w-4 items-center justify-center rounded-sm border border-indigo-600"
+                                >
+                                    <img src="./img/icons/bif.svg" alt="" class="h-full w-full object-contain" />
+                                </div>
+                            </div>
+                            <p>
+                                Я согласен
+                                <span class="text-bluea">
+                                    с Публичной офертой, Политикой конфиденциальности,Политикой возвратов
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- contentseven -->
+        <div class="relative mb-16 sm:w-full">
+            <div class="absolute top-72 z-[-100] sm:hidden">
+                <img src="./img/map2.png" alt="" />
+            </div>
+            <div class="container z-40">
+                <h2 class="mb-10 text-center text-3xl font-bold">Часто задаваемые вопросы</h2>
+                <div class="mx-auto flex w-[50rem] flex-col font-semibold sm:w-full">
+                    <div class="mb-7 flex w-full items-center rounded-lg bg-bgline p-5">
+                        <div class="mr-7 h-3">
+                            <img src="./img/icons/arrowdown.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                        <h3>Как работает сервис по приему SMS-сообщений на виртуальные номера?</h3>
+                    </div>
+                    <div class="mb-7 flex w-full items-center rounded-lg bg-bgline p-5">
+                        <div class="mr-7 h-3">
+                            <img src="./img/icons/arrowdown.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                        <h3>Как работает сервис по приему SMS-сообщений на виртуальные номера?</h3>
+                    </div>
+                    <div class="mb-7 flex w-full items-center rounded-lg bg-bgline p-5">
+                        <div class="mr-7 h-3">
+                            <img src="./img/icons/arrowdown.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                        <h3>Как работает сервис по приему SMS-сообщений на виртуальные номера?</h3>
+                    </div>
+                    <div class="mb-7 flex w-full items-center rounded-lg bg-bgline p-5">
+                        <div class="mr-7 h-3">
+                            <img src="./img/icons/arrowdown.svg" alt="" class="h-full w-full object-contain" />
+                        </div>
+                        <h3>Как работает сервис по приему SMS-сообщений на виртуальные номера?</h3>
+                    </div>
+                    <div class="mb-7 flex w-full items-center rounded-lg bg-bgline p-5">
+                        <div class="flex justify-center">
+                            <div class="mr-5 w-24">
+                                <img src="./img/icons/arrowup.svg" alt="" />
+                            </div>
+                            <div class="flex flex-col">
+                                <h3 class="mb-5">Как работает сервис по приему SMS-сообщений на виртуальные номера?</h3>
+                                <p class="text-sm">
+                                    Мы располагаем собственный оборудованием, в котором находятся симкарты, и
+                                    собственным программным обеспечением, с помощью которого мы предоставляем номер вам
+                                    для получения сообщения. Когда вы на купленный номер отправляете сообщение, оно
+                                    поступает на симкарту, наше ПО передаём его вам в интерфейсе нашего сервиса.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contentnine -->
+        <footer class="bg-footercolor py-16 sm:hidden">
+            <div class="container">
+                <nav class="flex justify-between">
+                    <div class="flex flex-col">
+                        <div class="mb-5 flex flex-col">
+                            <h3 class="mb-4 text-2xl font-semibold">Заголовок 1</h3>
+                            <ul>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="mb-5 flex flex-col">
+                            <h3 class="mb-4 text-2xl font-semibold">Заголовок 2</h3>
+                            <ul>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="mb-5 flex flex-col">
+                            <h3 class="mb-4 text-2xl font-semibold">Заголовок 3</h3>
+                            <ul>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                            </ul>
+                        </div>
+                        <div class="mb-5 flex flex-col">
+                            <h3 class="mb-4 text-2xl font-semibold">Заголовок 5</h3>
+                            <ul>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                            </ul>
+                        </div>
+                        <div class="mb-5 flex flex-col">
+                            <h3 class="mb-4 text-2xl font-semibold">Заголовок 6</h3>
+                            <ul>
+                                <li><a href="">Подзаголовок</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="mb-5 flex flex-col">
+                            <h3 class="mb-4 text-2xl font-semibold">Заголовок 4</h3>
+                            <ul>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                            </ul>
+                        </div>
+                        <div class="mb-5 flex flex-col">
+                            <h3 class="mb-4 text-2xl font-semibold">Заголовок 7</h3>
+                            <ul>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                            </ul>
+                        </div>
+                        <div class="mb-5 flex flex-col">
+                            <h3 class="mb-4 text-2xl font-semibold">Заголовок 8</h3>
+                            <ul>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                                <li><a href="">Подзаголовок</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="mb-10 flex h-5 items-center justify-center">
+                    <div class="mr-3 h-5">
+                        <img src="./img/images/mir.png" alt="" class="h-full w-full object-contain" />
+                    </div>
+                    <div class="mr-3 h-5">
+                        <img src="./img/images/visa.png" alt="" class="h-full w-full object-contain" />
+                    </div>
+                    <div class="mr-3 h-5">
+                        <img src="./img/images/master card.png" alt="" class="h-full w-full object-contain" />
+                    </div>
+                    <div class="mr-3 h-5">
+                        <img src="./img/images/qiwi.png" alt="" class="h-full w-full object-contain" />
+                    </div>
+                    <div class="mr-3 h-5">
+                        <img
+                            src="./img/images/aa915d303afe68b5ed1197756e8e2967 1.png"
+                            alt=""
+                            class="h-full w-full object-contain"
+                        />
+                    </div>
+                    <div class="mr-3 h-5">
+                        <img src="./img/images/iandex.png" alt="" class="h-full w-full object-cover" />
+                    </div>
+                    <div class="mr-3 h-5">
+                        <img src="./img/images/money.png" alt="" class="h-full w-full object-contain" />
+                    </div>
+                    <div class="mr-3 h-5">
+                        <img src="./img/images/bitcoin.png" alt="" class="h-full w-full object-contain" />
+                    </div>
+                    <div class="mr-3 h-5">
+                        <img src="./img/images/16.png" alt="" class="h-full w-full object-contain" />
+                    </div>
+                </div>
+                <div class="mx-auto flex w-[33rem] flex-col text-xs sm:w-full">
+                    <p>
+                        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
+                        consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="./script/script.js"></script>
+</html>
